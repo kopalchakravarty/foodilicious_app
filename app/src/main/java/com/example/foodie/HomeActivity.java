@@ -54,8 +54,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
 
     public void openActivityMap() {
-        //Intent intent=new Intent(this, MapActivity.class);
-        //startActivity(intent);
+        Intent intent=new Intent(this, MapActivity.class);
+        startActivity(intent);
     }
 
     public void openActivityRecipe() {
@@ -64,8 +64,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void openActivityPermissions() {
-        //Intent intent=new Intent(this,PermissionsActivity.class);
-        //startActivity(intent);
+        Intent intent=new Intent(this,PermissionsActivity.class);
+        startActivity(intent);
     }
 
 }
