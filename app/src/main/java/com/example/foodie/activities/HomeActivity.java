@@ -1,4 +1,4 @@
-package com.example.foodie;
+package com.example.foodie.activities;
 
 import android.content.Intent;
 //import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.foodie.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
@@ -59,12 +60,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void openActivityRecipe() {
-        //Intent intent=new Intent(this,RecipeActivity.class);
-        //startActivity(intent);
+        Intent intent=new Intent(this,MainActivity1.class);
+        startActivity(intent);
     }
 
     public void openActivityPermissions() {
-        Intent intent=new Intent(this,PermissionsActivity.class);
+        Intent intent=new Intent(this, PermissionsActivity.class);
         startActivity(intent);
     }
 

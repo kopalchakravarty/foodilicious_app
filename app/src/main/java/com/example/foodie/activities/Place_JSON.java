@@ -1,4 +1,4 @@
-package com.example.foodie;
+package com.example.foodie.activities;
 
 import org.json.JSONArray;
 import org.json.JSONException;
