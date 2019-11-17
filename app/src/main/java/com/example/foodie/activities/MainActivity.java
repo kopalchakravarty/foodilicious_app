@@ -20,6 +20,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 //import com.google.firebase.auth.AuthResult;
 
@@ -63,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
                                 Toast.makeText(MainActivity.this,"SignUp Unsuccessful, Please Try Again",Toast.LENGTH_SHORT).show();
                             }
                             else {
+                                FirebaseDatabase.getInstance().getReference().child("users").child(task.getResult().getUser().getUid()).child("email").setValue(emailId.getText().toString());
+                                //FirebaseDatabase.getInstance().getReference().child("users").child(task.getResult().getUser().getUid()).child("name").setValue(name.getText().toString());
+                                //FirebaseDatabase.getInstance().getReference().child("users").child(task.getResult().getUser().getUid()).child("roll").setValue(roll.getText().toString());
                                 startActivity(new Intent(MainActivity.this, HomeActivity.class));
                             }
                         }

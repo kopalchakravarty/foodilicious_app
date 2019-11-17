@@ -95,6 +95,7 @@ public class MainActivity1 extends AppCompatActivity {
                                     Recipe recipe = new Recipe();
                                     recipe.setTitle(jsonObject.getString("title"));
                                     recipe.setImage_url(jsonObject.getString("image"));
+                                    recipe.setId(jsonObject.getInt("id"));
 
                                     JSONArray array = jsonObject.getJSONArray("missedIngredients");
                                     for (int j = 0; j < array.length(); j++) {
@@ -133,6 +134,7 @@ public class MainActivity1 extends AppCompatActivity {
 
 
     }
+
 
 }
 

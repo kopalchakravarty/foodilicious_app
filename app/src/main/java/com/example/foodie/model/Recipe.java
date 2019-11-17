@@ -1,8 +1,23 @@
 package com.example.foodie.model;
 
+import com.google.firebase.database.Exclude;
+
 public class Recipe {private String title ;
 
     private String image_url;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int id;
+    @Exclude
+    public boolean isFavourite = false;
+
 
 
 
